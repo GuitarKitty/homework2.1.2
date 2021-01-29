@@ -12,24 +12,36 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="homework2_1_2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="BZn-gk-4XI">
-                                <rect key="frame" x="132" y="73" width="150" height="540"/>
+                                <rect key="frame" x="132" y="73" width="140" height="540"/>
                                 <subviews>
                                     <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yj3-T6-cxL">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="140"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="TEb-c1-R1B"/>
+                                            <constraint firstAttribute="width" constant="140" id="wQT-8A-Duu"/>
+                                        </constraints>
                                     </view>
                                     <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKv-xv-lZa">
-                                        <rect key="frame" x="0.0" y="200" width="150" height="140"/>
+                                        <rect key="frame" x="0.0" y="200" width="140" height="140"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="MuI-72-Uhm"/>
+                                            <constraint firstAttribute="height" constant="140" id="hOn-g9-LQ4"/>
+                                        </constraints>
                                     </view>
                                     <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTg-AL-6cX">
-                                        <rect key="frame" x="0.0" y="400" width="150" height="140"/>
+                                        <rect key="frame" x="0.0" y="400" width="140" height="140"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="4JR-KW-bBz"/>
+                                            <constraint firstAttribute="height" constant="140" id="Tl1-RY-F6l"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -38,10 +50,13 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIK-6k-Ahl">
-                                <rect key="frame" x="145" y="763" width="124" height="60"/>
+                                <rect key="frame" x="145" y="763" width="114" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="SwithcingTraficLightPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bm2-3y-9X6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -56,6 +71,12 @@
                             <constraint firstAttribute="bottom" secondItem="BZn-gk-4XI" secondAttribute="bottom" constant="283" id="vM1-W5-Znb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="GreenTraficLight" destination="aTg-AL-6cX" id="7dz-Ss-IUf"/>
+                        <outlet property="RedTraficLight" destination="Yj3-T6-cxL" id="FkS-5P-BG1"/>
+                        <outlet property="SwitchingTraficLightButton" destination="BIK-6k-Ahl" id="88u-EW-Gk2"/>
+                        <outlet property="YellowTraficLight" destination="KKv-xv-lZa" id="PZ9-bD-0fX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
